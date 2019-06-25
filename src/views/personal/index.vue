@@ -13,6 +13,7 @@
       </p>
     </div>
 
+    <!-- 学习生涯 -->
     <div class="intro-div">
       <h2>学习生涯</h2>
       <div class="study-div">
@@ -20,7 +21,7 @@
           <div style="height:auto;width:45%;margin: 0 auto;">
             <img src="../../assets/images/images/bg3.jpg" alt="">
           </div>
-          <span style="text-align: left;margin-left:0px;">
+          <span style="text-align: center;margin-left:0px;">
             <h3 style="font-size:25px;margin:15px;">小学</h3>
             <div class="study-info-div">
               <div>
@@ -37,7 +38,7 @@
           </span>
         </div>
         <div class="study-part">
-          <span style="text-align: right;margin-right:0px;">
+          <span style="text-align: center;margin-right:0px;">
             <h3 style="font-size:25px;margin:15px;">中学</h3>
             <div class="study-info-div">
               <div>
@@ -60,7 +61,7 @@
           <div style="height:auto;width:45%;margin: 0 auto;">
             <img src="../../assets/images/images/bg3.jpg" alt="">
           </div>
-          <span style="text-align: left;margin-left:0px;">
+          <span style="text-align: center;margin-left:0px;">
             <h3 style="font-size:25px;margin:15px;">大学</h3>
             <div class="study-info-div">
               <div>
@@ -78,12 +79,41 @@
         </div>
       </div>
     </div>
+
+    <!-- 所学技能 -->
+    <div>
+      <h2>所学技能</h2>
+      <div id="mySkill" style="height:300px;width:700px;">
+
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+var echarts = require('echarts')
   export default {
-    name: 'personal'
+    name: 'personal',
+    mounted(){
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('mySkill'))
+      // 绘制图表
+      myChart.setOption({
+          title: {
+              text: 'ECharts 入门示例'
+          },
+          tooltip: {},
+          xAxis: {
+              data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+          },
+          yAxis: {},
+          series: [{
+              name: '销量',
+              type: 'bar',
+              data: [5, 20, 36, 10, 10, 20]
+          }]
+      })
+    }
   }
 </script>
 
@@ -144,7 +174,7 @@
 .study-info-div{
   display: flex;
   flex-flow: row;
-  margin: 10px auto 10px 0px;
+  margin: 10px auto;
 }
 .study-info-div>div{
   display: flex;
