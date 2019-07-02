@@ -88,7 +88,7 @@
     background-color:currentColor;
     align-content: center;
     margin-top: 40px;
-    position:fixed;bottom:0;left:0;
+    position:fixed;bottom:0;left:0;z-index: 999;
 }
 #contactIcon>div,#contactIcon img{
     height: 30px;
