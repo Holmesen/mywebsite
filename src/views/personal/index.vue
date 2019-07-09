@@ -20,12 +20,6 @@
         </div>
       </div>
 
-      
-      <!-- <div class=" block-div">
-        
-      </div> -->
-      
-
       <!-- 学习生涯 -->
       <div class=" block-div stu-block">
         <div class="intro-div block-div">
@@ -298,32 +292,6 @@ var echarts = require('echarts')
         ]
       })
 
-      // 监听页面滚动
-      //页面中的某一个元素
-      // var stu = jq(".stu-block")
-      // var skill = jq(".skill-block")
-      // var cases = jq(".case-block")
-      // var oWin = jq(window)
-      // let scrollH = document.body.scrollTop
-      // window.addEventListener('scroll',()=>{
-      //   // scrollH = document.body.scrollTop
-      //   if (!((oWin.scrollTop() > (cases.offset().top - 300 + cases.outerHeight())) || ((oWin.scrollTop() + oWin.height()) < cases.offset().top - 300))) {
-      //     this.showblock = 'case'
-      //   }else{
-      //     if (!((oWin.scrollTop() > (skill.offset().top - 300 + skill.outerHeight())) || ((oWin.scrollTop() + oWin.height()) < skill.offset().top - 300))) {
-      //       this.showblock = 'skill'
-      //     }else{
-      //       if (!((oWin.scrollTop() > (stu.offset().top - 300 + stu.outerHeight())) || ((oWin.scrollTop() + oWin.height()) < stu.offset().top - 300))) {
-      //         this.showblock = 'stu'
-      //       }else{
-      //         this.showblock = 'intro'
-      //       }
-      //     }
-      //   }
-      //   // console.log(scrollH)
-      // })
-
-      
     }
   }
 </script>
@@ -333,20 +301,10 @@ var echarts = require('echarts')
   text-align: left !important;
 }
 .personal-div{
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  align-content: center;
+  height: auto; width: 100%; display: flex; flex-flow: column; align-content: center;
 }
 .top-div{
-  height: 100vh;
-  width: 100vw;
-  
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -999;
+  height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -999;
 }
 .top-div-intro{
   background: url('../../assets/images/images/bg3.jpg') no-repeat fixed center;
@@ -361,43 +319,23 @@ var echarts = require('echarts')
   background: url('../../assets/images/images/bg2.jpg') no-repeat fixed center;
 }
 .content-div{
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  align-content: center;
-  margin: auto;
-  padding-top: 300px;
+  height: auto; width: 100%; display: flex; flex-flow: column;
+  align-content: center; margin: auto; padding-top: 300px;
 }
 .block-div{
-  background-color: white;
-  width: 100%;
-  margin: 100px auto;
-  padding: 80px 0px;
+  background-color: white; width: 100%; margin: 100px auto; padding: 80px 0px;
 }
 
 .intro-div{
-  height: auto;
-  width: 75%;
-  align-content: center;
-  text-align: center;
-  display: flex;
-  flex-flow: column;
-  margin: 40px auto;
+  height: auto; width: 75%; align-content: center; text-align: center;
+  display: flex; flex-flow: column; margin: 40px auto;
 }
 
 .study-div{
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  height: auto;
+  display: flex; flex-flow: column; width: 100%; height: auto;
 }
 .study-part{
-  display: flex;
-  flex-flow: row;
-  width: 100%;
-  height: auto;
-  margin: 40px auto;
+  display: flex; flex-flow: row; width: 100%; height: auto; margin: 40px auto;
 }
 /* .study-part:nth-of-type(odd){
   float: left;margin: 20px auto 20px 10px;
@@ -406,106 +344,57 @@ var echarts = require('echarts')
   float: right;margin: 20px 10px 20px auto;
 } */
 .study-part img{
-  height: auto;
-  width: 100%;
+  height: auto; width: 100%;
 }
 .study-part>span{
-  height: auto;
-  width: 45%;
-  display: flex;
-  flex-flow: column;
-  margin: 0 auto;
+  height: auto; width: 45%; display: flex; flex-flow: column; margin: 0 auto;
 }
 .study-info-div{
-  display: flex;
-  flex-flow: row;
-  margin: 10px auto;
+  display: flex; flex-flow: row; margin: 10px auto;
 }
 .study-info-div>div{
-  display: flex;
-  flex-flow: row;
-  align-content: center;
-  margin: auto 30px auto 0px;
-  width: fit-content;
+  display: flex; flex-flow: row; align-content: center; margin: auto 30px auto 0px; width: fit-content;
 }
 .study-info-div>div>img{
-  height: 30px;
-  width: 30px;
-  margin: auto;
+  height: 30px; width: 30px; margin: auto;
 }
 .study-info-div>div>span{
-  font-size: 14px;
-  line-height: 30px;
-  margin-left: 10px;
+  font-size: 14px; line-height: 30px; margin-left: 10px;
 }
 
 .case{
-  display: flex;
-  flex-flow: row;
-  width: 70%;
-  height: auto;
-  align-content: center;
-  margin: 20px auto;
+  display: flex; flex-flow: row; width: 70%; height: auto; align-content: center; margin: 20px auto;
 }
 .case-divs{
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  align-content: center;
+  width: 100%; height: auto; display: flex; flex-flow: row; flex-wrap: wrap; align-content: center;
 }
 .case-div{
-  width: 45%;
-  height: auto;
-  margin: 20px auto;
-  display: flex;
-  flex-flow: column;
-  align-content: center;
+  width: 45%; height: auto; margin: 20px auto; display: flex; flex-flow: column; align-content: center;
 }
 .case-imgdiv{
-  width: 100%;
-  max-height: calc(100% - 40px);
-  display: flex;
-  flex-flow: row;
-  overflow: hidden;
+  width: 100%; max-height: calc(100% - 40px); display: flex; flex-flow: row; overflow: hidden;
 }
 .case-imgdiv>img{
-  width: 100%;
-  height: auto;
-  margin: auto;
+  width: 100%; height: auto; margin: auto;
 }
 .case-div>span{
-  text-align: center;
-  margin: auto;
-  width: auto;
-  line-height: 2em;
-  font-size: 20px;
+  text-align: center; margin: auto; width: auto; line-height: 2em; font-size: 20px;
 }
 .case-div>span{
   cursor: pointer;
 }
 
 .case-imgdiv img {
-  display: block;
-  border: 0;
-  width: 100%;
-  transform: scale(1);
-  transition: all 1s ease 0s;
-  -webkit-transform: scale(1);
-  -webkit-transform: all 1s ease 0s;
+  display: block; border: 0; width: 100%; transform: scale(1); transition: all 1s ease 0s;
+  -webkit-transform: scale(1); -webkit-transform: all 1s ease 0s;
 }
 .case-imgdiv:hover img {
-  cursor: pointer;
-  transform: scale(1.3);
-  transition: all 1s ease 0s;
-  -webkit-transform: scale(1.3);
-  -webkit-transform: all 1s ease 0s;
+  cursor: pointer; transform: scale(1.3); transition: all 1s ease 0s;
+  -webkit-transform: scale(1.3); -webkit-transform: all 1s ease 0s;
 }
 
 #work-experience::before {
-  content:'\260E';
-  font-size: 15px;
+  content:'\260E'; font-size: 15px;
 }
 
 .company-info{
