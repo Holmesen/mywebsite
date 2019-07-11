@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import home from '@/views/home'
 import personal from '@/views/personal'
 import album from '@/views/album'
+import albumInfo from '@/views/album/albumInfo'
 
 Vue.use(Router)
 
@@ -20,6 +21,10 @@ export default new Router({
       path: '/album',
       name: 'album',
       component: album
+    },{
+      path: '/album/albumInfo',
+      name: 'albumInfo',
+      component: albumInfo
     }
   ]
 })

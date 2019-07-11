@@ -35,7 +35,7 @@
 <style scoped>
 .myheader{
     width:100%;display:flex;flex-flow:row;justify-content:space-between;padding:10px 20px;
-    position:fixed;top:0;left:0;height: 70px;background-color: currentColor;z-index: 999;
+    position:fixed;top:0;left:0;height: 70px;background-color: currentColor;z-index: 99999;
 }
 .header-logo{
     margin:auto 10px;height:80%;display: flex;flex-flow: row;height: 100%;align-content: center;
