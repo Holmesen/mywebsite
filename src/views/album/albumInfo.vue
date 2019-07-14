@@ -22,8 +22,35 @@
 			</p>
 		</div>
 		<div class="editor-div">
-			<el-divider content-position="left">发表评论</el-divider>
+			<el-divider content-position="left" style="font-size:16px;font-weight:bold;">发表评论</el-divider>
 			<div ref="editor" style="text-align:left"></div>
+			<div class="submit"><el-button type="primary" round>发表评论</el-button></div>
+		</div>
+		<div class="comment-div">
+			<div v-for="(item,index) in [1,2,3]" :key="index">
+				<div class="comment-top">
+					<div class="comment-top-left">
+						<img src="../../assets/images/avatar.jpg" alt="">
+						<span>Holmesen</span>
+						<span>2019/07/14</span>
+					</div>
+					<div class="comment-top-right">
+						<span>
+							<i class="iconfont iconappreciate" style="font-size:18px;margin-right:5px;"></i>
+							999
+						</span>
+						<span>
+							<i class="iconfont iconoppose_light" style="font-size:18px;margin-right:5px;"></i>
+							666
+						</span>
+					</div>
+				</div>
+				<div class="comment-bottom">
+					<span>
+						外媒援引华为副董事长郭平的话称，尽管华为在摩纳哥的业务范围很小，但是5G在摩纳哥的全覆盖是一个重大发展机遇，使得华为打开了一扇窗，可以作为其他国家和运营商的榜样。 在摩纳哥电信官网上，已经开始推广华为Mate 20 X 5G、小米MIX 3 5G两款新手机。
+					</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -49,47 +76,67 @@ import E from 'wangeditor'
 
 <style scoped>
 *{
-	display: flex;
-	flex-flow: column;
-	align-content: center;
+	display: flex; flex-flow: column; align-content: center;
 }
 #id{
-	width: 100%;
-	padding: 50px 0;
+	width: 100%; padding: 50px 0;
 }
 .title{
-	margin: auto;
-	width: 50%;
+	margin: auto;	width: 50%;
 }
 .author{
-	flex-flow: row;
-	width: 50%;
-	margin: 15px auto;
+	flex-flow: row;	width: 50%;	margin: 15px auto;
 }
 .author>span{
-	margin: auto;
-	font-size: 15px;
-	line-height: 46.4px;
-	flex-flow: row;
+	margin: auto;	font-size: 15px;	line-height: 46.4px; flex-flow: row;
 }
 .author>span>i{
-	font-size: 20px;
-  margin: auto 7px;
+	font-size: 20px;  margin: auto 7px;
 }
-.picture,.editor-div{
-	width: 50%;
-	margin: 15px auto;
+.picture,.editor-div,.comment-div{
+	width: 50%;	margin: 15px auto;
 }
 .picture>img{
-	width: 100%;
-	height: auto;
+	width: 100%;	height: auto;
 }
 .content{
-	font-size: 17px;
-	line-height: 2em;
-	width: 50%;
-  margin: auto;
-	text-align: left;
-	text-indent: 2em;
+	font-size: 17px; line-height: 2em;	width: 50%;  margin: auto;	text-align: left;	text-indent: 2em;
+}
+.submit{
+	width: fit-content;
+	margin: 20px 10px 20px auto;
+}
+.comment-div>div{
+	width: 100%; margin: 10px auto; padding: 20px 0px; border-bottom: solid 1px #dcdcdc;
+}
+.comment-top{
+	width: 100%; flex-flow: row;	justify-content: space-between;
+}
+.comment-top-left{
+	margin: auto auto auto 0px;	flex-flow: row;
+}
+.comment-top-right{
+	margin: auto 0px auto auto;	flex-flow: row;
+}
+.comment-top-left>img{
+	width:35px; height:35px; border-radius: 100%; margin: auto 7px;
+}
+.comment-top-left>span{
+	font-size: 17px; line-height: 35px; margin: auto 7px;
+}
+.comment-top-right>i{
+	font-size: 36px;
+}
+.comment-top-right{
+	line-height: 35px;
+}
+.comment-top-right>span{
+	flex-flow: row; margin-left: 20px; cursor: pointer;
+}
+.comment-bottom{
+	width: 100%; flex-flow: column;
+}
+.comment-bottom>span{
+	font-size: 15px; line-height: 1.5em; text-align: left; padding-left: 50px; text-indent: 2em;
 }
 </style>

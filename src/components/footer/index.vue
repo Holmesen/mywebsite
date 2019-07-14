@@ -1,17 +1,17 @@
 <template>
-    <div style="width:100%;">
-        <div id="contactIcon">
-            <div v-for="(item,index) in imgList" :key="index">
-                <!-- <div id="hoverIcon" v-if="item.link=='javascript:;'">
-                    <img :src="item.img"/>
-                </div> -->
-                <a id="iconA" :href="item.link">
-                    <img v-if="item.link=='javascript:;'" class="qrcode" :src="item.img"/>
-                    <img :src="item.flag?item.src2:item.src1" @mouseover="overIcon(index)" @mouseout="outIcon(index)"/>
-                </a>
-            </div>
-        </div>
-    </div>
+	<div style="width:100%;">
+		<div id="contactIcon">
+			<div v-for="(item,index) in imgList" :key="index">
+				<!-- <div id="hoverIcon" v-if="item.link=='javascript:;'">
+					<img :src="item.img"/>
+				</div> -->
+				<a id="iconA" :href="item.link">
+					<img v-if="item.link=='javascript:;'" class="qrcode" :src="item.img"/>
+					<img :src="item.flag?item.src2:item.src1" @mouseover="overIcon(index)" @mouseout="outIcon(index)"/>
+				</a>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -81,39 +81,39 @@
 
 <style scoped>
 #contactIcon{
-    display: flex;
-    flex-flow: row;
-    height: 80px;
-    width: 100%;
-    background-color:currentColor;
-    align-content: center;
-    margin-top: 40px;
-    position:fixed;bottom:0;left:0;z-index: 99999;
+	display: flex;
+	flex-flow: row;
+	height: 80px;
+	width: 100%;
+	background-color:currentColor;
+	align-content: center;
+	margin-top: 40px;
+	/* position:fixed;bottom:0;left:0;z-index: 99999; */
 }
 #contactIcon>div,#contactIcon img{
-    height: 30px;
-    width: 30px;
-    margin: auto;
+	height: 30px;
+	width: 30px;
+	margin: auto;
 }
 #contactIcon img:hover{
-    cursor: pointer;
+	cursor: pointer;
 }
 #hoverIcon{
-    height: auto;
-    width: 130px;
-    display: flex;
-    align-content: center;
-    position: absolute;
+	height: auto;
+	width: 130px;
+	display: flex;
+	align-content: center;
+	position: absolute;
 }
 #hoverIcon>img{
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    top: -20px;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	top: -20px;
 }
 /* 弹出图片样式 */
 #iconA {
-    position: relative;
+	position: relative;
 }
 #iconA img.qrcode {
   position: absolute;

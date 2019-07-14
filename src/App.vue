@@ -26,6 +26,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
-  padding: 80px 0;
+  padding: 80px 0 0 0;
+}
+*{
+  font-family: cursive;
 }
 </style>
