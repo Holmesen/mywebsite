@@ -21,6 +21,7 @@
 				在摩纳哥电信官网上，已经开始推广华为Mate 20 X 5G、小米MIX 3 5G两款新手机。 
 			</p>
 		</div>
+		<!-- 评论 -->
 		<div class="editor-div">
 			<el-divider content-position="left" style="font-size:16px;font-weight:bold;">发表评论</el-divider>
 			<div ref="editor" style="text-align:left"></div>
@@ -103,8 +104,7 @@ import E from 'wangeditor'
 	font-size: 17px; line-height: 2em;	width: 50%;  margin: auto;	text-align: left;	text-indent: 2em;
 }
 .submit{
-	width: fit-content;
-	margin: 20px 10px 20px auto;
+	width: fit-content;	margin: 20px 10px 20px auto;
 }
 .comment-div>div{
 	width: 100%; margin: 10px auto; padding: 20px 0px; border-bottom: solid 1px #dcdcdc;

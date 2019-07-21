@@ -27,7 +27,7 @@
 						内容简要占位置内容简要占位置内容简要占位置内容简要占位置内容简要占位置
 						内容简要占位置内容简要占位置内容简要占位置内容简要占位置内容简要占位置
 					</div>
-					<div class="content-more">read more →</div>
+					<div class="content-more" @click="toInfo">read more →</div>
 				</div>
 			</div>
 		</div>
@@ -36,7 +36,17 @@
 
 <script>
 	export default {
-		name: 'blog'
+		name: 'blog',
+		data() {
+			return {
+				//
+			}
+		},
+		methods: {
+			toInfo() {
+				this.$router.push({path: '/blog/blogInfo'})
+			}
+		}
 	}
 </script>
 
