@@ -6,6 +6,7 @@ import album from '@/views/album'
 import albumInfo from '@/views/album/albumInfo'
 import blog from '@/views/blog'
 import blogInfo from '@/views/blog/blogInfo'
+import life from '@/views/life'
 
 Vue.use(Router)
 
@@ -35,6 +36,10 @@ export default new Router({
       path: '/blog/blogInfo',
       name: 'blogInfo',
       component: blogInfo
+    },{
+      path: '/life',
+      name: 'life',
+      component: life
     }
   ]
 })

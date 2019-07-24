@@ -21,16 +21,21 @@
       </div>
     </div> -->
     <div class='homeBG' style=""></div>
+    <myfooter></myfooter>
   </div>
 </template>
 
 <script>
 import Swiper from 'swiper'
+import myfooter from '../../components/footer/index'
   export default {
     name: 'home',
     data(){
       return {
       }
+    },
+    components: {
+      myfooter
     },
     mounted(){
     //   new Swiper('#swiper-container',{
