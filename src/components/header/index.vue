@@ -2,14 +2,14 @@
     <div style="width:100%;">
         <div class="myheader" style="">
             <!-- 图标logo -->
-            <div class="header-logo"><img src="../../assets/icon/logo.png" alt=""></div>
+            <div class="header-logo"><img src="../../assets/logo-Holmesen.png" alt=""></div>
             <div class="header-nav">
                 <!-- 导航 -->
                 <div class="header-navigator">
-                    <span>首页</span>
-                    <span>个人博客</span>
-                    <span>时光相册</span>
-                    <span>生活记事</span>
+                    <span><router-link style="color: cadetblue;text-decoration: none;" to="/">首页</router-link></span>
+                    <span><router-link style="color: cadetblue;text-decoration: none;" to="/blog">个人博客</router-link></span>
+                    <span><router-link style="color: cadetblue;text-decoration: none;" to="/album">时光相册</router-link></span>
+                    <span><router-link style="color: cadetblue;text-decoration: none;" to="/life">生活记事</router-link></span>
                 </div>
                 <!-- 登录者头像名称 -->
                 <div class="header-user">
@@ -50,7 +50,7 @@
     margin: auto 50px;display: flex;flex-flow: row;align-content: center;text-align: center;
 }
 .header-navigator>span{
-    font-size: 15px; line-height: 2em; margin: auto 20px; font-weight: bold; color: cadetblue;
+    font-size: 15px; line-height: 2em; margin: auto 20px; font-weight: bold; color: cadetblue; cursor: pointer;
 }
 .header-user{
     margin: auto 50px;display: flex;flex-flow: row;align-content: center;text-align: center; height: 100%;

@@ -7,10 +7,12 @@ import albumInfo from '@/views/album/albumInfo'
 import blog from '@/views/blog'
 import blogInfo from '@/views/blog/blogInfo'
 import life from '@/views/life'
+import lifeInfo from '@/views/life/lifeInfo'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -40,6 +42,10 @@ export default new Router({
       path: '/life',
       name: 'life',
       component: life
+    },{
+      path: '/life/lifeInfo',
+      name: 'lifeInfo',
+      component: lifeInfo
     }
   ]
 })
