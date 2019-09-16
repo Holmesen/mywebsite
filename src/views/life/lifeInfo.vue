@@ -47,8 +47,9 @@
 					</div>
 				</div>
 				<div class="comment-bottom">
-					<span>
+					<span style="display:block;">
 						外媒援引华为副董事长郭平的话称，尽管华为在摩纳哥的业务范围很小，但是5G在摩纳哥的全覆盖是一个重大发展机遇，使得华为打开了一扇窗，可以作为其他国家和运营商的榜样。 在摩纳哥电信官网上，已经开始推广华为Mate 20 X 5G、小米MIX 3 5G两款新手机。
+						<img src="http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/50/pcmoren_huaixiao_org.png" alt="[坏笑]" data-w-e="1">哈哈
 					</span>
 				</div>
 			</div>
@@ -76,9 +77,9 @@ import E from 'wangeditor'
 </script>
 
 <style scoped>
-*{
+/* *{
 	display: flex; flex-flow: column; align-content: center;
-}
+} */
 #id{
 	width: 100%; padding: 50px 0;
 }
@@ -86,10 +87,10 @@ import E from 'wangeditor'
 	margin: auto;	width: 50%;
 }
 .author{
-	flex-flow: row;	width: 50%;	margin: 15px auto;
+	display: flex; flex-flow: row;	width: 50%;	margin: 15px auto;
 }
 .author>span{
-	margin: auto;	font-size: 15px;	line-height: 46.4px; flex-flow: row;
+	margin: auto;	font-size: 15px;	line-height: 46.4px; display: flex; flex-flow: row;
 }
 .author>span>i{
 	font-size: 20px;  margin: auto 7px;
@@ -110,13 +111,13 @@ import E from 'wangeditor'
 	width: 100%; margin: 10px auto; padding: 20px 0px; border-bottom: solid 1px #dcdcdc;
 }
 .comment-top{
-	width: 100%; flex-flow: row;	justify-content: space-between;
+	width: 100%; display: flex; flex-flow: row;	justify-content: space-between;
 }
 .comment-top-left{
-	margin: auto auto auto 0px;	flex-flow: row;
+	margin: auto auto auto 0px;	display: flex; flex-flow: row;
 }
 .comment-top-right{
-	margin: auto 0px auto auto;	flex-flow: row;
+	margin: auto 0px auto auto;	display: flex; flex-flow: row;
 }
 .comment-top-left>img{
 	width:35px; height:35px; border-radius: 100%; margin: auto 7px;
@@ -131,10 +132,10 @@ import E from 'wangeditor'
 	line-height: 35px;
 }
 .comment-top-right>span{
-	flex-flow: row; margin-left: 20px; cursor: pointer;
+	display: flex; flex-flow: row; margin-left: 20px; cursor: pointer;
 }
 .comment-bottom{
-	width: 100%; flex-flow: column;
+	width: 100%; display: flex; flex-flow: column;
 }
 .comment-bottom>span{
 	font-size: 15px; line-height: 1.5em; text-align: left; padding-left: 50px; text-indent: 2em;

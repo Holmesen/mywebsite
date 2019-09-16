@@ -6,6 +6,7 @@ import album from '@/views/album'
 import albumInfo from '@/views/album/albumInfo'
 import blog from '@/views/blog'
 import blogInfo from '@/views/blog/blogInfo'
+import writeBlog from '@/views/blog/writeBlog'
 import life from '@/views/life'
 import lifeInfo from '@/views/life/lifeInfo'
 
@@ -38,6 +39,10 @@ export default new Router({
       path: '/blog/blogInfo',
       name: 'blogInfo',
       component: blogInfo
+    },{
+      path: '/blog/writeBlog',
+      name: 'writeBlog',
+      component: writeBlog
     },{
       path: '/life',
       name: 'life',

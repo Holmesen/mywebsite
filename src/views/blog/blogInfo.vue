@@ -30,7 +30,7 @@
 		<div class="editor-div">
 			<el-divider content-position="left" style="font-size:16px;font-weight:bold;">发表评论</el-divider>
 			<div ref="editor" style="text-align:left"></div>
-			<div class="submit"><el-button type="primary" round>发表评论</el-button></div>
+			<div class="submit"><el-button type="primary" round @click="Comment">发表评论</el-button></div>
 		</div>
 		<div class="comment-div">
 			<div v-for="(item,index) in [1,2,3]" :key="index">
@@ -47,7 +47,7 @@
 				</div>
 				<div class="comment-bottom">
 					<span>
-						外媒援引华为副董事长郭平的话称，尽管华为在摩纳哥的业务范围很小，但是5G在摩纳哥的全覆盖是一个重大发展机遇，使得华为打开了一扇窗，可以作为其他国家和运营商的榜样。 在摩纳哥电信官网上，已经开始推广华为Mate 20 X 5G、小米MIX 3 5G两款新手机。
+						<p>埼玉在独自做了一段时间英雄后，与弟子杰诺斯一起，正式加入英雄协会，与众多英雄一起开始了对抗各种怪人以及灾难的生活。不过经常是在无人知晓的情况下做英雄的工作。<img src="http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/50/pcmoren_huaixiao_org.png" alt="[坏笑]" data-w-e="1"></p>
 					</span>
 				</div>
 			</div>
@@ -70,20 +70,25 @@ import E from 'wangeditor'
 				this.editorContent = html
 			}
 			editor.create()
+		},
+		methods: {
+			Comment() {
+				console.log(this.editorContent)
+			}
 		}
 
 	}
 </script>
 
 <style scoped>
-*{
+/* *{
 	display: flex; flex-flow: column; align-content: center;
-}
+} */
 .author-div{
-	flex-flow: row; width: 60%; margin: auto;
+	display: flex; flex-flow: row; width: 60%; margin: auto;
 }
 .author-div>span{
-	margin: auto; flex-flow: row; font-size: 17px; line-height: 40px;
+	margin: auto; display: flex; flex-flow: row; font-size: 17px; line-height: 40px;
 }
 .author-div>span>i{
 	height: 18px; margin: auto 5px auto 0px;
@@ -101,19 +106,19 @@ import E from 'wangeditor'
 	width: 60%; margin: 10px auto; font-size: 18px; line-height: 2em; text-indent: 2em; text-align: left;
 }
 .operate{
-	flex-flow: row; width: 50%; margin: 20px auto;
+	display: flex; flex-flow: row; width: 50%; margin: 20px auto;
 }
 .operate>span{
-	flex-flow: column; margin: auto; text-align: center; font-size: 15px; line-height: 2em; cursor: pointer;
+	display: flex; flex-flow: column; margin: auto; text-align: center; font-size: 15px; line-height: 2em; cursor: pointer;
 }
 .operate>span>i{
 	margin: auto;
 }
 .other{
-	width: 60%; flex-flow: row; justify-content: space-between; margin: auto;
+	width: 60%; display: flex; flex-flow: row; justify-content: space-between; margin: auto;
 }
 .other>span{
-	margin: auto 0px; flex-flow: row; font-size: 17px; line-height: 40px; cursor: pointer;
+	margin: auto 0px; display: flex; flex-flow: row; font-size: 17px; line-height: 40px; cursor: pointer;
 }
 .other>span>i{
 	font-size: 22px; line-height: 40px; margin: auto 20px;
@@ -129,13 +134,13 @@ import E from 'wangeditor'
 	width: 100%; margin: 10px auto; padding: 20px 0px; border-bottom: solid 1px #dcdcdc;
 }
 .comment-top{
-	width: 100%; flex-flow: row;	justify-content: space-between;
+	width: 100%; display: flex; flex-flow: row;	justify-content: space-between;
 }
 .comment-top-left{
-	margin: auto auto auto 0px;	flex-flow: row;
+	margin: auto auto auto 0px;	display: flex; flex-flow: row;
 }
 .comment-top-right{
-	margin: auto 0px auto auto;	flex-flow: row;
+	margin: auto 0px auto auto;	display: flex; flex-flow: row;
 }
 .comment-top-left>img{
 	width:35px; height:35px; border-radius: 100%; margin: auto 7px;
@@ -150,12 +155,18 @@ import E from 'wangeditor'
 	line-height: 35px;
 }
 .comment-top-right>span{
-	flex-flow: row; margin-left: 20px; cursor: pointer;
+	display: flex; flex-flow: row; margin-left: 20px; cursor: pointer;
 }
 .comment-bottom{
-	width: 100%; flex-flow: column;
+	width: 100%; display: flex; flex-flow: column;
 }
 .comment-bottom>span{
-	font-size: 15px; line-height: 1.5em; text-align: left; padding-left: 50px; text-indent: 2em;
+	font-size: 15px; line-height: 1.5em; text-align: left; padding-left: 50px; text-indent: 2em; display: flex; flex-flow: row;
+}
+.comment-bottom>span p{
+	display: block; flex-flow: row;
+}
+.comment-bottom>span img{
+	height: 20px; width: 20px; margin: auto 3px;
 }
 </style>
