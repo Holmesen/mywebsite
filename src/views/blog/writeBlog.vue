@@ -7,6 +7,7 @@
       </span>
     </div>
     <div class="info">
+      <span><el-button type="primary" round>发表文章</el-button></span>
       <span>
         <span><i class="el-icon-collection-tag"></i><b>标题：</b></span>
         <el-input placeholder="请输入标题" clearable v-model="active.title"></el-input>
