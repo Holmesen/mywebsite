@@ -21,9 +21,9 @@
     <div v-if="!issignin" class="signup-div">
       <span style="font-size:20px; line-height:1.5em; text-align:center; font-weight:bold;">注册</span>
       <span style="margin: 10px auto;">
-        <el-upload class="avatar-uploader" action="http://www.holmesen.xyz/upload_image"
+        <el-upload class="avatar-uploader" :action='this.baseURL+"/avatar"'
           :show-file-list="false" :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload">
-          <img v-if="imageUrl" :src="imageUrl" class="avatar">
+          <img v-if="imageLocalUrl" :src="imageLocalUrl" class="avatar">
           <i v-else class="el-icon-picture-outline-round avatar-uploader-icon"></i>
         </el-upload>
         <span style="font-size:13px; font-height:1em; color:#999999; text-align:center;">点击上传头像</span>
@@ -42,7 +42,7 @@
           </el-radio-group>
         </el-form-item>
         <el-form-item label="生日" prop="birthday">
-          <el-date-picker type="date" placeholder="选择日期" v-model="infoForm.birthday" style="width: 100%;"></el-date-picker>
+          <el-date-picker value-format="yyyy-MM-dd" type="date" placeholder="选择日期" v-model="infoForm.birthday" style="width: 100%;"></el-date-picker>
         </el-form-item>
         <el-form-item label="简述" prop="intro">
           <el-input type="textarea" v-model="infoForm.intro"></el-input>
@@ -62,16 +62,18 @@ import {login, signup} from '../../apis/sign.js'
   export default {
     data() {
       return {
+        baseURL: process.env.BASE_API,
         issignin: true,
         name: '',
         pwd: '',
         imageUrl: '',
+        imageLocalUrl: '',
         infoForm: {
           avatar: '',
           name: '',
           pwd: '',
           sex: '',
-          birthday: '',
+          birthday: null,
           intro: ''
         },
         rules: {
@@ -109,6 +111,12 @@ import {login, signup} from '../../apis/sign.js'
           return
         }
         this.isloading2 = true
+        if(this.infoForm.birthday) {
+          (this.infoForm.birthday).replace(/\//g, '-')
+        }
+        if(this.infoForm.sex) {
+          this.infoForm.sex = this.infoForm.sex==='男'?'1':'0'
+        }
         signup(this.infoForm).then(res=> {
           this.$message.success('注册成功！')
         }).catch(err=> {
@@ -117,8 +125,11 @@ import {login, signup} from '../../apis/sign.js'
         }).finally(()=>{ this.isloading2 = false })
       },
       handleAvatarSuccess(res, file) {
-        this.imageUrl = URL.createObjectURL(file.raw)
-        console.log('上传头像成功！', this.imageUrl)
+        // console.log('res: ', res)
+        this.imageLocalUrl = URL.createObjectURL(file.raw)
+        // console.log('上传头像成功！', this.imageUrl)
+        this.imageUrl = this.baseURL + (res.data.path || '')
+        this.infoForm.avatar = 'http://localhost:3000' + (res.data.path || '')
       },
       beforeAvatarUpload(file) {
         const isJPG = file.type === 'image/jpeg'
